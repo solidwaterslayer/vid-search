@@ -1,9 +1,11 @@
+https://solidwaterslayer.github.io/vid-search/
+
 ```sh
 npm run build
 ```
 
 ```sh
-git add dist
+git add dist -f
 ```
 
 ```sh
