@@ -1,7 +1,21 @@
-<script setup lang="ts">
+<script lang="ts">
+import ax from 'axios'
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+  data() {
+    return {
+      count: null
+    }
+  },
+  mounted() {
+    ax.get('https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=bob&key=AIzaSyCkkMO5kQ4kI2F_hRbS_QeXVYxdVjz0-9Q').then((response: any) => (this.count = response))
+  }
+})
 </script>
 
 <template>
+  {{ count }}
   <table class="table">
     <thead>
       <tr>
