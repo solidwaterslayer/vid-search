@@ -8,8 +8,6 @@
 >
 > I made this project to learn vue.
 >
-> Some friends challenged me to make this site as fast as possible. :smile:
->
 > :ring:
 >
 > ---
@@ -42,6 +40,9 @@
 > 6. Visit http://localhost:3000/
 >
 > ---
+
+<br>
+<br>
 
 > ---
 >
