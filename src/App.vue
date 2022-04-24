@@ -26,5 +26,12 @@ export default defineComponent({
     <input v-model="key" placeholder="edit me" />
     <button v-on:click="search">search</button>
   </div>
-  <Video :video="videos" />
+
+  <div v-if="videos && videos['data'] && videos['data']['items']">
+    <div v-for="video in videos['data']['items']">
+      <Video :video="video" />
+    </div>
+  </div>
+
+  <div v-else>No results</div>
 </template>
