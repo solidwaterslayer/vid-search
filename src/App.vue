@@ -1,58 +1,30 @@
 <script lang="ts">
 import ax from 'axios'
 import { defineComponent } from 'vue'
+import Video from './Video.vue'
 
 export default defineComponent({
+  components: {
+    Video
+  },
   data() {
     return {
-      count: null
+      key: '',
+      videos: null
     }
   },
-  mounted() {
-    ax.get('https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=bob&key=AIzaSyCkkMO5kQ4kI2F_hRbS_QeXVYxdVjz0-9Q').then((response: any) => (this.count = response))
+  methods: {
+    search() {
+      ax.get('https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q=' + this.key + '&safeSearch=none&type=video&key=AIzaSyC3BjES57YZy-QvOavWsvkSKCSytDaykzA').then((response: any) => (this.videos = response))
+    }
   }
 })
 </script>
 
 <template>
-  {{ count }}
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-        <th scope="col">Handle</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td colspan="2">Larry the Bird</td>
-        <td>@twitter</td>
-      </tr>
-    </tbody>
-  </table>
-  <div class="card" style="width: 18rem;">
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">An item</li>
-      <li class="list-group-item">A second item</li>
-      <li class="list-group-item">A third item</li>
-    </ul>
+  <div>
+    <input v-model="key" placeholder="edit me" />
+    <button v-on:click="search">search</button>
   </div>
+  <Video :video="videos" />
 </template>
-
-<style>
-</style>
