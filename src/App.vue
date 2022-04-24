@@ -22,6 +22,8 @@ export default defineComponent({
 </script>
 
 <template>
+  <h1 class="ps-5 py-1 position-absolute text-info" style="text-shadow: 2px 2px lightblue;">Vid Search</h1>
+
   <div class="d-flex justify-content-center py-2">
     <input aria-label="Search term" class="form-control w-50" placeholder="Search" v-model="key" v-on:keyup.enter="search"/>
     <button class="btn btn-outline-info" type="button" @click="search">Search</button>
@@ -32,5 +34,5 @@ export default defineComponent({
       <Video :video="video" />
     </div>
   </div>
-  <div v-else>No results</div>
+  <div v-else>No results or there are only a limited number of searches per day.</div>
 </template>

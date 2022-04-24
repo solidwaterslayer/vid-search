@@ -1,17 +1,56 @@
-https://solidwaterslayer.github.io/vid-search/
+<br>
 
-```sh
-npm run build
-```
+> ---
+>
+> # Vid Search :heart:
+>
+> This is my 5th project [2022].
+>
+> I made this project to learn vue.
+>
+> Some friends challenged me to make this site as fast as possible. :smile:
+>
+> :ring:
+>
+> ---
 
-```sh
-git add dist -f
-```
+<br>
+<br>
 
-```sh
-git commit -m "refactor: update build"
-```
+> ---
+>
+> # Usage
+>
+> Here is a running instance/link to the project:
+>
+> https://solidwaterslayer.github.io/vid-search/
+>
+> ---
 
-```sh
-git subtree push --prefix dist origin gh-pages
-```
+<br>
+<br>
+
+> ---
+>
+> # Run Your Own Instance :sleepy:
+>
+> 1. Clone or download the repository
+> 2. Install node.js
+> 3. Type into command line at the root of the repository:
+> 4. ```npm install```
+> 5. ```npm start```
+> 6. Visit http://localhost:3000/
+>
+> ---
+
+> ---
+>
+> # How To Build :sleepy:
+>
+> 1. Type into command line at the root of the repository:
+> 2. ```npm run build```
+> 3. ```git add dist -f```
+> 4. ```git commit -m "refactor: update build"```
+> 5. ```git subtree push --prefix dist origin gh-pages```
+>
+> ---
