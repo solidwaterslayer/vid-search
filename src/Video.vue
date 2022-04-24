@@ -12,7 +12,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <div class="hover mb-3" @click="redirect" tabindex="0">
+  <div class="hover mb-3" @click="redirect" tabindex="0" v-on:keyup.enter="redirect">
     <div class="row mx-0">
       <div class="col-1"></div>
       <div class="col-4 d-flex justify-content-end">

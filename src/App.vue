@@ -22,9 +22,9 @@ export default defineComponent({
 </script>
 
 <template>
-  <div>
-    <input v-model="key" placeholder="edit me" />
-    <button v-on:click="search">search</button>
+  <div class="d-flex justify-content-center py-2">
+    <input aria-label="Search term" class="form-control w-50" placeholder="Search" v-model="key" v-on:keyup.enter="search"/>
+    <button class="btn btn-outline-info" type="button" @click="search">Search</button>
   </div>
 
   <div v-if="videos && videos['data'] && videos['data']['items']">
@@ -32,6 +32,5 @@ export default defineComponent({
       <Video :video="video" />
     </div>
   </div>
-
   <div v-else>No results</div>
 </template>
